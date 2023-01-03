@@ -101,7 +101,7 @@ app.post("/auth/register", async (req, res) => {
   try {
     await user.save();
 
-    res.status(201).json({ msg: "Usuário criado com sucesso!" });
+    res.status(201).json({ msg: "Usuário criado com sucesso!", status:201 });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
@@ -144,7 +144,7 @@ app.post("/auth/login", async (req, res) => {
       secret
     );
 
-    res.status(200).json({ msg: "Autenticação realizada com sucesso!", token });
+    res.status(200).json({ msg: "Autenticação realizada com sucesso!", token,id:user._id });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
