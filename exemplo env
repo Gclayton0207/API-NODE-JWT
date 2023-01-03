@@ -1,0 +1,4 @@
+DB_USER=nome do usuario do mongo
+DB_PASS=senha do usuario do mongo
+DB_CLUSTER=link do cluster do mong
+SECRET=secret do JWT
